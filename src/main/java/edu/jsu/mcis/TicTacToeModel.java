@@ -250,6 +250,7 @@ public class TicTacToeModel {
         /* Return true if the game is over */
          
         return Result.NONE != getResult();
+    
     }
 
     public boolean isXTurn() {
