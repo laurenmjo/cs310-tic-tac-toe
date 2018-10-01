@@ -104,9 +104,7 @@ public class TicTacToeModel {
                     return true;
                 }
             }
-            else{
-                return false; 
-            }  
+                return false;  
     }
 	
     private boolean isValidSquare(int row, int col) {
@@ -118,8 +116,10 @@ public class TicTacToeModel {
                 if((col < width) && (col >=0)){
                     return true;
                 }
-            } 
-            return false;       
+            }
+            else{
+                return false;
+            }       
     }
 	
     private boolean isSquareMarked(int row, int col) {
@@ -140,7 +140,12 @@ public class TicTacToeModel {
         /* Return mark from the square at the specified location */
         
         /* INSERT YOUR CODE HERE */
+        if(isValidSquare(row, col)){
             return grid[row][col];
+        }
+        else{
+            return null;
+        }
     }
 	
     public Result getResult() {
@@ -160,7 +165,7 @@ public class TicTacToeModel {
                 return Result.TIE;
             }
             else{
-                return Result.NONE;
+                return null;
             }
 
     }
