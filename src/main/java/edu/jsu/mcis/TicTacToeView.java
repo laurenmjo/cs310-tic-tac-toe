@@ -3,6 +3,8 @@ package edu.jsu.mcis;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import edu.jsu.mcis.TicTacToeModel.Mark;
+import edu.jsu.mcis.TicTacToeModel.Result;
 
 public class TicTacToeView extends JPanel implements ActionListener {
     
@@ -60,14 +62,14 @@ public class TicTacToeView extends JPanel implements ActionListener {
         
         // INSERT YOUR CODE HERE
         //set row number
-        row = Interger.parseInt(name.substring(6,7));
+        row = Integer.parseInt(name.substring(6,7));
         this.row = row;
         //set column number
-        col = Interger.parseInt(name.substring(7,8));
+        col = Integer.parseInt(name.substring(7,8));
         this.col = col;
 
         //check to see if it is not GameOver
-        if(!model.isGameOver()){
+        if(!model.isGameover()){
             model.makeMark(row, col);
             updateSquares();
             Result result = model.getResult();

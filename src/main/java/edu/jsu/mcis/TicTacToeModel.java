@@ -117,9 +117,8 @@ public class TicTacToeModel {
                     return true;
                 }
             }
-            else{
                 return false;
-            }       
+                  
     }
 	
     private boolean isSquareMarked(int row, int col) {
@@ -246,12 +245,11 @@ public class TicTacToeModel {
         
     }
 
-    public boolean isGameover() {
-        
+    public boolean isGameover() { 
+
         /* Return true if the game is over */
-        
+         
         return Result.NONE != getResult();
-        
     }
 
     public boolean isXTurn() {
